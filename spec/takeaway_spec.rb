@@ -12,7 +12,7 @@ describe Takeaway do
   end
   
   describe '#view_menu' do
-    it 'allows the user to place an order' do 
+    it 'allows the user to view an order' do 
     expect(takeaway.view_menu).to eq(menu.print_dishes)
     end
   end

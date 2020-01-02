@@ -6,6 +6,7 @@ class Takeaway
 
   def initialize(menu = Menu.new) 
     @menu = menu
+    return "'.view_menu' to view the menu" 
   end 
 
   def view_menu 
