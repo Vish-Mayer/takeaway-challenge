@@ -6,7 +6,7 @@ class Menu
       dishes_list.each do |dish, price|
         clean_dish = dish.to_s.split('_').map(&:capitalize).join(' ')
         start = "#{index + 1}. #{clean_dish}" 
-        finish = '£.%.2f' % "#{price}"
+        finish = '£%.2f' % "#{price}"
         puts(start.ljust(30) + finish.rjust(5))
       end
     end  
