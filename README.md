@@ -48,7 +48,7 @@ Medium Pizza                  £7.99
 Garlic Dip                    £0.25
 Medium Softdrink              £1.20
  
-Total amount                  £25.67
+Total amount                  £9.44 
  => nil 
 2.6.5 :008 >
 ``` 
