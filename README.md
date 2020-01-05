@@ -14,14 +14,44 @@ Takeaway Challenge
 
  ```
 
-Instructions
--------
+First 3 user stories completed. 
+Note: I am aiming for better coverage in my tests and will not proceed to the final user story until this is achieved.
 
-* Challenge time: rest of the day and weekend, until Monday 9am
-* Feel free to use google, your notes, books, etc. but work on your own
-* If you refer to the solution of another coach or student, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit a pull request to this repo with your code by 9am Monday morning
+
+How to use:
+===========
+
+```
+2.6.5 :001 > require './lib/takeaway.rb'
+ => true 
+2.6.5 :002 > a = Takeaway.new
+ => #<Takeaway:0x00007fa00a026460 @menu=#<Menu:0x00007fa00a0263c0 @dishes=[{:large_pizza=>10.99}, {:medium_pizza=>7.99}, {:garlic_dip=>0.25}, {:large_softdrink=>1.9}, {:medium_softdrink=>1
+.2}]>, @basket=#<Basket:0x00007fa00a0249a8 @order={}, @total=0>> 
+2.6.5 :003 > a.view_menu
+1. Large Pizza                £10.99
+2. Medium Pizza               £7.99
+3. Garlic Dip                 £0.25
+4. Large Softdrink            £1.90
+5. Medium Softdrink           £1.20
+ => [{:large_pizza=>10.99}, {:medium_pizza=>7.99}, {:garlic_dip=>0.25}, {:large_softdrink=>1.9}, {:medium_softdrink=>1.2}] 
+2.6.5 :004 > a.add_to_basket
+Medium Pizza
+ => "medium_pizza added to basket" 
+2.6.5 :005 > a.add_to_basket
+Garlic Dip
+ => "garlic_dip added to basket" 
+2.6.5 :006 > a.add_to_basket
+Medium Softdrink
+ => "medium_softdrink added to basket" 
+2.6.5 :007 > a.view_basket
+Medium Pizza                  £7.99
+Garlic Dip                    £0.25
+Medium Softdrink              £1.20
+ 
+Total amount                  £25.67
+ => nil 
+2.6.5 :008 >
+``` 
 
 ```
 As a customer

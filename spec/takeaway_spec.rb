@@ -3,8 +3,8 @@ require 'takeaway'
 describe Takeaway do
 
   subject(:takeaway) { described_class.new(menu, basket) }
-  let(:menu) { double(:menu, print_dishes: Array) }
-  let(:basket) { Basket.new }
+  let(:menu) { double(:menu, dishes: Array, print_dishes: Array) }
+  let(:basket) { double(:basket, clean_basket: Array) }
   
   describe '#initialize' do 
     it 'has a menu with dishes and prices' do
@@ -16,9 +16,21 @@ describe Takeaway do
   end
   
   describe '#view_menu' do
-    it 'allows the user to view an order' do 
+    it 'allows the user to view the menu in a printed format' do 
     expect(takeaway.view_menu).to eq(menu.print_dishes)
     end
   end
+
+  describe '#add_to_basket' do 
+    it 'allows the user to add a dish to the basket' do 
+      allow($stdin).to receive(:gets).and_return('Large Pizza') 
+    end 
+  end
+  
+  describe '#view_basket' do
+    it 'allows the user to view the contents of their current order in printed fortmat' do 
+    expect(takeaway.view_basket).to eq(basket.clean_basket)
+    end 
+  end 
 end
 

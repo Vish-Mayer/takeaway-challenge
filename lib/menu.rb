@@ -1,5 +1,11 @@
 class Menu
 
+  attr_reader :dishes 
+
+  def initialize
+    @dishes = dishes
+  end  
+
   def print_dishes (menu = dishes)
 
     menu.each_with_index do |dishes_list, index|
@@ -11,13 +17,12 @@ class Menu
       end
     end  
   end
-  
-  private 
 
   def dishes 
     [ 
-      {large_pizza: 10.90},
-      {medium_pizza: 7.90},
+      {large_pizza: 10.99},
+      {medium_pizza: 7.99},
+      {garlic_dip: 0.25}, 
       {large_softdrink: 1.90},
       {medium_softdrink: 1.20}
     ]
