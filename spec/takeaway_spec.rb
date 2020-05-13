@@ -4,7 +4,7 @@ require 'menu'
 describe Takeaway do
 
   subject(:takeaway) { described_class.new }
-  let(:menu) { double(print: {"large_pizza" => 12.99})}
+  let(:menu) { double(print: "large_pizza 12.99")}
 
   describe '#initialize' do
     it 'is initialized with a an instance of the Menu class' do

@@ -10,6 +10,6 @@ class Takeaway
   end
 
   def print_menu
-    @menu.dishes
+    @menu.print
   end
 end
