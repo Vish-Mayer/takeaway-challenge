@@ -4,7 +4,7 @@ require 'menu'
 describe Takeaway do
 
   subject(:takeaway) { described_class.new }
-  let(:menu) { double(dishes: "large pizza: £12.99")}
+  let(:menu) { double(print: {"large_pizza" => 12.99})}
 
   describe '#initialize' do
     it 'is initialized with a an instance of the Menu class' do
@@ -14,7 +14,7 @@ describe Takeaway do
 
   describe '#print_menu' do
     it 'prints a list of dishes with their price' do
-      expect(takeaway.print_menu).to eq menu.dishes
+      expect(takeaway.print_menu).to include menu.print
     end
   end
 end
