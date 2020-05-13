@@ -3,7 +3,13 @@ require_relative 'basket'
 
 class Takeaway
 
+  attr_reader :menu
+
+  def initialize(menu = Menu.new)
+    @menu = menu
+  end
+
   def print_menu
-    "large pizza: £12.99"
+    @menu.dishes
   end
 end
