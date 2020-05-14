@@ -21,6 +21,7 @@ class Takeaway
       if item.match? Regexp.union(clean_dish)
         dish = "#{dish} x #{quantity}"
         @basket.order.store(dish, price * quantity)
+        @basket.add 
       end
     }
   end
