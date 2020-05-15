@@ -12,17 +12,21 @@ class Takeaway
   end
 
   def print_menu
-    @menu.print
+    menu.print
   end
 
   def add_to_basket(item, quantity = 1)
-    @menu.dishes.each {|dish, price|
+    menu.dishes.each {|dish, price|
       clean_dish = dish.to_s.split('_').map(&:capitalize).join(' ')
       if item.match? Regexp.union(clean_dish)
-        dish = "#{dish} x #{quantity}"
-        @basket.order.store(dish, price * quantity)
-        @basket.add 
+        dish = "#{quantity}x #{dish}"
+        x = basket.order.store(dish, price * quantity)
+        basket.add
       end
     }
+  end
+
+  def view_basket
+    basket.view
   end
 end

@@ -23,8 +23,14 @@ describe Takeaway do
     it 'adds an item from the menu and quantity into the basket' do
       takeaway.add_to_basket("Large Pizza", 3)
       takeaway.add_to_basket("Drink")
-      expect(takeaway.basket.order).to eq "drink x 1"=>1.55, "large_pizza x 3"=>38.97
+      expect(takeaway.basket.order).to eq "1x drink"=>1.55, "3x large_pizza"=>38.97
       expect(takeaway.basket.total).to eq 40.52
+    end
+  end
+
+  describe '#view_basket' do
+    it 'shows the contents of the basket and returns the total' do
+      expect(takeaway.view_basket).to eq takeaway.basket.view
     end
   end
 end

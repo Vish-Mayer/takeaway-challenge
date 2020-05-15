@@ -22,4 +22,15 @@ describe Basket do
       expect(basket.total).to eq 20.98
     end
   end
+
+  describe '#view' do
+    it 'diplays the contents of the basket' do
+      allow(basket).to receive(:order).and_return order
+      print_order = "1. Large Pizza 12.99\n2. Medium Pizza 7.99\n"
+      expect { basket.view }.to output(print_order).to_stdout
+    end
+    it 'returns the total price of the order' do
+      expect(basket.view).to eq basket.total
+    end
+  end
 end
