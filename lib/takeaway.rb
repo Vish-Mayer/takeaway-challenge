@@ -29,6 +29,4 @@ class Takeaway
   def view_basket
     basket.view
   end
-
-  private
 end
