@@ -14,8 +14,14 @@ Dotenv.load('.env')
 
   def send(total)
     message = @client.messages.create(
-      body: "Your order has been confirmed and should arrive at around #{(Time.now + (60 * 30)).strftime("%k:%M")}. Total cost: £#{total}",
+      body: "Your order has been confirmed and should arrive at around #{time.strftime("%k:%M")}. Total cost: £#{total}",
       to: @to,
       from: @from )
+  end
+
+  private
+
+  def time
+    Time.now + (60 * 30)
   end
 end
