@@ -20,7 +20,7 @@ class Takeaway
       clean_dish = dish.to_s.split('_').map(&:capitalize).join(' ')
       if item.match? Regexp.union(clean_dish)
         dish = "#{quantity}x #{dish}"
-        x = basket.order.store(dish, price * quantity)
+        basket.order.store(dish, price * quantity)
         basket.add
       end
     }
@@ -29,4 +29,6 @@ class Takeaway
   def view_basket
     basket.view
   end
+
+  private
 end

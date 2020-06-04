@@ -24,7 +24,7 @@ describe Takeaway do
       takeaway.add_to_basket("Large Pizza", 3)
       takeaway.add_to_basket("Drink")
       expect(takeaway.basket.order).to eq "1x drink"=>1.55, "3x large_pizza"=>38.97
-      expect(takeaway.basket.total).to eq 40.52
+      expect(takeaway.basket.total). to eq 40.52
     end
   end
 

@@ -7,7 +7,7 @@ class Menu
       puts "#{index + 1}. #{cleanlist}"
     }
   end
-
+  
   def dishes
     {
       "large_pizza" => 12.99,
