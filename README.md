@@ -1,5 +1,4 @@
 # Takeaway Challenge
-Under construction
 
 ```
  ____                   
