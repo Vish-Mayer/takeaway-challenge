@@ -15,6 +15,9 @@ describe Takeaway do
     it 'is initialized with a an instance of the Basket class' do
       expect(takeaway.basket).to be_an_instance_of(Basket)
     end
+    it 'is initialized with a an instance of the Basket class' do
+      expect(takeaway.text_message).to be_an_instance_of(TextMessage)
+    end
   end
 
   describe '#print_menu' do

@@ -13,7 +13,11 @@ class Basket
 
   def view
     print
-    total 
+    total
+  end
+
+  def empty?
+    total == 0
   end
 
   private

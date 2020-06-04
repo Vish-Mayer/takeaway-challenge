@@ -33,4 +33,10 @@ describe Basket do
       expect(basket.view).to eq basket.total
     end
   end
+  describe '#empty?' do
+    it 'returns false if the basket has items' do
+      allow(basket).to receive(:order).and_return order
+      expect(basket.empty?).to eq false
+    end
+  end
 end
