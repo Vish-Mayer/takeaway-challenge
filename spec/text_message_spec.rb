@@ -10,6 +10,6 @@ describe TextMessage do
    message_body = { body: message , from: ENV["FROM"], to: ENV["TO"],  }
    allow(client).to receive_message_chain(:messages, :create).with(message_body)
    expect(Twilio::REST::Client).to receive(:new).with(ENV['ACCOUNT_SID'], ENV['AUTH_TOKEN']).and_return(client)
-   text_message.send('£12.50')
+   text_message.send('12.50')
  end
 end

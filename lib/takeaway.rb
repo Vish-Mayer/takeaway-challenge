@@ -1,14 +1,17 @@
 require_relative 'menu'
 require_relative 'basket'
+require_relative 'text_message'
 
 class Takeaway
 
-  attr_reader :menu, :basket
+  attr_reader :menu, :basket, :text_message
 
   def initialize(menu = Menu.new,
                  basket = Basket.new)
+                 text_message = TextMessage.new
     @menu = menu
     @basket = basket
+    @text_message = text_message
   end
 
   def print_menu
@@ -24,6 +27,10 @@ class Takeaway
         basket.add
       end
     }
+  end
+
+  def checkout
+    text_message.send(basket.total)
   end
 
   def view_basket
