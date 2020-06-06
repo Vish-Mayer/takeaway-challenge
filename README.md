@@ -12,9 +12,7 @@
 88b,   ,a8" 88 ,d8"      ,d8"      88,    ,88  
 88`YbbdP"'  88 TAKEAWAY! ORDER NOW `"8bbdP"Y8   
 88                                             
-88                                               
-
-                                              
+88                                                                                  
 ```
 ##### [*OVERVIEW*](#Overview) | [*HOW TO USE*](#How-to-use) | [*DEMO*](#Demo) | [*USER REQUIREMENTS*](#User-Requirements )
 ___
