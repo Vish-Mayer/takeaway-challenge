@@ -7,8 +7,8 @@ class Takeaway
   attr_reader :menu, :basket, :text_message
 
   def initialize(menu = Menu.new,
-                 basket = Basket.new)
-                 text_message = TextMessage.new
+                 basket = Basket.new,
+                 text_message = TextMessage.new)
     @menu = menu
     @basket = basket
     @text_message = text_message
