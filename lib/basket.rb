@@ -8,7 +8,7 @@ class Basket
   end
 
   def add
-    @total = (order.map { |_,y| y}).sum.round(10)
+    @total = (order.map { |_, y| y }).sum.round(10)
   end
 
   def view

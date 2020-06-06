@@ -6,7 +6,7 @@ describe Takeaway do
 
   subject(:takeaway) { described_class.new }
   let(:menu) { double(print: "large_pizza 12.99") }
-  let(:text_message){double :text_message}
+  let(:text_message) { double :text_message }
 
   describe '#initialize' do
     it 'is initialized with a an instance of the Menu class' do
@@ -30,7 +30,7 @@ describe Takeaway do
     it 'adds an item from the menu and quantity into the basket' do
       takeaway.add_to_basket("Large Pizza", 3)
       takeaway.add_to_basket("Drink")
-      expect(takeaway.basket.order).to eq "1x drink"=>1.55, "3x large_pizza"=>38.97
+      expect(takeaway.basket.order).to eq "1x drink" => 1.55, "3x large_pizza" => 38.97
       expect(takeaway.basket.total). to eq 40.52
     end
   end

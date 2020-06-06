@@ -1,11 +1,11 @@
 # Takeaway Challenge
 ```
                                                    
-8b,dPPYba,  88 888888888 888888888 ,adPPYYba,  // ""--.._
-88P'    "8a 88      a8P"      a8P" ""     `Y8  ||  (_)  _ "-._
-88       d8 88   ,d8P'     ,d8P'   ,adPPPPP88  ||    _ (_)    '-.
-88b,   ,a8" 88 ,d8"      ,d8"      88,    ,88  ||   (_)   __..-'
-88`YbbdP"'  88 TAKEAWAY! ORDER NOW `"8bbdP"Y8   \\__..--""
+8b,dPPYba,  88 888888888 888888888  // ""--.._
+88P'    "8a 88      a8P"      a8P"  ||  (_)  _ "-._
+88       d8 88   ,d8P'     ,d8P'    ||    _ (_)    '-.
+88b,   ,a8" 88 ,d8"      ,d8"       ||   (_)   __..-'
+88`YbbdP"'  88 TAKEAWAY! ORDER NOW  \ \\__..--""
 88                                             
 88                                               
 

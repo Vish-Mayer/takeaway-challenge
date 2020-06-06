@@ -3,8 +3,8 @@ require 'basket'
 describe Basket do
 
   subject(:basket) { described_class.new }
-  let(:order) { double(order: order)}
-  order = {"large_pizza" => 12.99, "medium_pizza" => 7.99}
+  let(:order) { double(order: order) }
+  order = { "large_pizza" => 12.99, "medium_pizza" => 7.99 }
 
   describe '#initialize' do
     it 'is initialized with an empty order' do

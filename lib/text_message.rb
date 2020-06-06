@@ -2,7 +2,7 @@ require 'twilio-ruby'
 require 'dotenv'
 Dotenv.load('.env')
 
- class TextMessage
+class TextMessage
 
   def initialize
     account_sid = ENV['ACCOUNT_SID']
@@ -16,10 +16,10 @@ Dotenv.load('.env')
     message = @client.messages.create(
       body: "Your order has been confirmed and should arrive at around #{time}. Total cost: £#{total}",
       to: @to,
-      from: @from )
+      from: @from)
   end
 
-  private
+ private
 
   def time
     (Time.now + (60 * 30)).strftime("%k:%M")

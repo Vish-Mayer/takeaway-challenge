@@ -19,7 +19,7 @@ class Takeaway
   end
 
   def add_to_basket(item, quantity = 1)
-    menu.dishes.each {|dish, price|
+    menu.dishes.each { |dish, price|
       clean_dish = dish.to_s.split('_').map(&:capitalize).join(' ')
       if item.match? Regexp.union(clean_dish)
         dish = "#{quantity}x #{dish}"
